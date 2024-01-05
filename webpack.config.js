@@ -10,6 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
+    publicPath: '/frontend-fonyou/',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -37,7 +38,7 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
           },
-          'css-loader', 
+          'css-loader',
         ],
       },
     ],
@@ -49,6 +50,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: './public/index.html',
       filename: './index.html',
+      publicPath: '/frontend-fonyou/',
     }),
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
