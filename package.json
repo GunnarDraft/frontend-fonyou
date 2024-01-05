@@ -8,7 +8,8 @@
     "predeploy": " npm run build",
     "deploy": "gh-pages -d build",
     "dev": "webpack serve --open --config webpack.config.dev.js",
-    "build": "webpack --mode production --config webpack.config.js",
+    "build:webpack": "webpack --mode production --config webpack.config.js",
+    "build": "react-scripts build",
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
     "lint": "eslint src/"
   },
@@ -39,6 +40,7 @@
     "react-dom": "^18.2.0",
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.21.1",
+    "react-scripts": "5.0.1",
     "redux": "^5.0.1",
     "webpack": "^5.89.0"
   },
