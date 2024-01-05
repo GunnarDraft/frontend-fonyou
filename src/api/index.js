@@ -1,6 +1,6 @@
  
 export const getCharacters = async (name, page) => {
-    const apiURL = "https://backend-fonyou.vercel.app/character"
+    const apiURL = "https://rickandmortyapi.com/api/character"
   
     try {
         const response = await fetch(`${apiURL}?page=${page}&name=${name}`);
