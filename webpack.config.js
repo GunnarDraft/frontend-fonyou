@@ -10,7 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
-    publicPath: '/frontend-fonyou/'
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -48,18 +48,21 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './public/index.html', 
+      template: './public/index.html',
+      filename: './index.html',
+      publicPath: '/'
+
     }),
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
     }),
     new CleanWebpackPlugin(),
   ],
-  // optimization: {
-  //   minimize: true,
-  //   minimizer: [
-  //     new CssMinimizerPlugin(),
-  //     new TerserPlugin()
-  //   ],
-  // },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new CssMinimizerPlugin(),
+      new TerserPlugin()
+    ],
+  },
 };
