@@ -55,7 +55,6 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
-      publicPath: '/frontend-fonyou/'
     }),
     new CleanWebpackPlugin(),
   ],
