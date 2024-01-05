@@ -1,6 +1,6 @@
  
 export const getCharacters = async (name, page) => {
-    const apiURL = "https://rickandmortyapi.com/api/character"
+    const apiURL = process.env.REACT_APP_URL_API
   
     try {
         const response = await fetch(`${apiURL}?page=${page}&name=${name}`);
