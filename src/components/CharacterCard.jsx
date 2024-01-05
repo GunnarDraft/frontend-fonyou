@@ -38,7 +38,7 @@ const CharacterCard = () => {
             <motion.div className='title'>{ character.name }</motion.div>
           </motion.li>
         )
-        ) : <div>No se encontraron resultados</div> }
+        ) : <div className='withoutResult'>No se han encontrado resultados</div> }
       </motion.ul>
       <AnimatePresence>
         { characters.length > 0 && selectedId && (

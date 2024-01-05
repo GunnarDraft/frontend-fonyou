@@ -15,7 +15,7 @@
   }
 
   body {
-      background-color: #70967c;
+      background-color: #8aa480;
   }
 
   .main {
@@ -26,15 +26,17 @@
   .home {
       color: #000;
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
       justify-content: space-evenly;
   }
 
   .card {
       height: 128px;
       width: 256px;
-      background-color: #97ce4cdf;
-      border: 1px solid #D4D952aa;
+      background-color: #a9f3fdaa;
+      backdrop-filter: blur(16px);
       overflow: hidden;
       padding: 16px;
       margin: 16px;
@@ -51,9 +53,8 @@
       position: fixed;
       top: calc(50% - 256px);
       left: calc(50% - 512px);
-      background-color: #97ce4cdf;
+      background-color: #a9f3fd72;
       backdrop-filter: blur(16px);
-      border: 1px solid #D4D952aa;
       overflow: hidden;
       padding: 32px;
       border-radius: 8px;
@@ -66,16 +67,14 @@
   .container {
       width: 100vw;
       max-width: 1600px;
-      height: calc(100vh - 144px);
+      height: 100vh;
       display: grid;
-      overflow: auto;
-      margin: 0;
+      overflow: visible;
       list-style: none;
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(5, 1fr);
-      gap: 15px;
-      padding: 15px;
-      background-color: #70967c;
+      gap: 16px;
+      padding: 16px 0;
   }
 
   @media (max-width: 1550px) {
@@ -113,11 +112,13 @@
   .image {
       height: 96px;
       width: 96px;
+      border-radius: 8px;
   }
 
   .imageModal {
       height: 100%;
       width: auto;
+      border-radius: 8px;
   }
 
   .search {
@@ -129,13 +130,13 @@
       background-color: #a9f3fdaa;
       border: none;
       border-radius: 8px;
-      font-size: 20px;  
+      font-size: 20px;
 
   }
 
   .search::placeholder {
       color: #171b1c;
-      margin-left: 8px; 
+      margin-left: 8px;
   }
 
   .searchBar {
@@ -146,14 +147,17 @@
       border-radius: 8px;
       background-color: #58c9d8aa;
       backdrop-filter: blur(16px);
-      margin-top: 64px;
+      margin: 16px;
+      box-shadow: 2px 2px 8px #24251caa;
   }
 
   .background {
       background-color: #2342457c;
       width: 100vw;
       height: 100vh;
+      left: 0;
       position: fixed;
+      top: 0;
       z-index: 2;
       backdrop-filter: blur(32px);
   }
@@ -191,6 +195,7 @@
       border-radius: 8px;
       font-weight: 600;
       backdrop-filter: blur(16px);
+      box-shadow: 2px 2px 4px #24251c52;
   }
 
   .btnNext {
@@ -206,7 +211,7 @@
       margin: 8px;
       border-radius: 8px;
       font-weight: 600;
-  }
+    box-shadow: 2px 2px 4px #24251c52;  }
 
   .page {
       border: none;
@@ -220,11 +225,30 @@
       margin: 8px;
       border-radius: 8px;
       font-weight: 600;
-  }
+    box-shadow: 2px 2px 4px #24251c52;  }
 
   .title {
       padding: 4px 8px;
-      font-size: 1rem;
+      font-size: 1.1rem;
+      font-weight: 500;
+  }
+
+  .withoutResult {
+      height: 80px;
+      width: 100vw;
+      max-width: 1600px;
+      background-color: #a9f3fdaa;
+      backdrop-filter: blur(16px);
+      font-size: 2rem;
+      overflow: hidden;
+      padding: 16px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: flex-start;
+      cursor: pointer;
+      box-shadow: 2px 2px 8px #24251caa;
+      text-align: center;
+      justify-content: center;
   }
 
   .titleModal {

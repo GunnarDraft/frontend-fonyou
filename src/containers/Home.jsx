@@ -6,6 +6,7 @@ import Pagination from '../components/Pagination';
 import SearchBar from '../components/SearchBar';
 import CharacterCard from '../components/CharacterCard';
 import { setCharacters } from '../actions/index';
+import SvgComponent from '../components/SvgComponent';
 
 const Home = () => {
 
@@ -18,9 +19,12 @@ const Home = () => {
 
             if (result.info && result.info.count > 0) {
                 dispatch(setCharacters(result.results, result.info.pages, result.info.count));
+            } else {
+                dispatch(setCharacters([], 1, 1));
+
             }
         } catch (error) {
-
+            dispatch(setCharacters([], 1, 1));
         }
     };
 
@@ -31,6 +35,7 @@ const Home = () => {
 
     return (
         <div className='home'>
+            <SvgComponent />
             <SearchBar />
             <CharacterCard />
             <Pagination />
