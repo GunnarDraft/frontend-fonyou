@@ -29,13 +29,10 @@
     "webpack": "^5.89.0"
   },
   "scripts": {
-    "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "webpack serve --open --config webpack.config.dev.js",
-    "build": "webpack --mode production --config webpack.config.js",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "webpack --mode production --config webpack.config.js"
   },
   "eslintConfig": {
     "extends": [
@@ -67,9 +64,9 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-prettier": "^5.1.2",
-    "eslint-plugin-react": "^7.33.2", 
+    "eslint-plugin-react": "^7.33.2",
     "prettier": "^3.1.1",
-    "terser-webpack-plugin": "^5.3.10", 
+    "terser-webpack-plugin": "^5.3.10",
     "webpack-dev-server": "^4.15.1"
   }
 }

@@ -25,7 +25,7 @@ const CharacterCard = () => {
                 opacity: 1,
               }
             } }
-             
+
             layoutId={ character.id }
             onClick={ () => dispatch(setSelectedId(character.id)) }
             initial="hidden"
@@ -55,13 +55,16 @@ const CharacterCard = () => {
             onClick={ () => dispatch(setSelectedId(null)) }
           />
         ) }
-        { selectedId && (
+        { characters.length > 0 && selectedId && (
           <motion.div className='cardModal' layoutId={ selectedId } >
             <motion.img className='imageModal' alt={ characters.find(character => character.id === selectedId).name } src={ characters.find(character => character.id === selectedId).image } ></motion.img>
             <motion.div className='titleModal'>
-              Nombre: { characters.find(character => character.id === selectedId).name }
-              Estado: { characters.find(character => character.id === selectedId).status }
-              Especie: { characters.find(character => character.id === selectedId).species }
+              <b>Nombre:</b> { characters.find(character => character.id === selectedId).name }  <br />
+              <b>Estado:</b> { characters.find(character => character.id === selectedId).status } <br />
+              <b>Especie:</b> { characters.find(character => character.id === selectedId).species } <br />
+              <b>Género:</b> { characters.find(character => character.id === selectedId).gender }<br />
+              <b>Origen:</b> { characters.find(character => character.id === selectedId).origin?.name }<br />
+              <b>Ubicación:</b> { characters.find(character => character.id === selectedId).location?.name }
             </motion.div>
             <motion.button className='btnExit' onClick={ () => dispatch(setSelectedId(null)) }>✖</motion.button>
           </motion.div>

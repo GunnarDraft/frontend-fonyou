@@ -5,17 +5,14 @@ import { useSelector, useDispatch } from 'react-redux';
 export const Pagination = () => {
 
     const dispatch = useDispatch();
-    
+
     const {
-        totalPages, 
+        totalPages,
         page,
     } = useSelector((state) => state.character);
 
     return (
         <nav className='pageContent' >
-            <p className='page'>
-                Page { page } of { totalPages }
-            </p>
             {
                 page > 1 && (
                     <button className='btnPrev' onClick={ () => dispatch(setPage(page - 1)) }>
@@ -23,6 +20,9 @@ export const Pagination = () => {
                     </button>
                 )
             }
+            <div className='page'>
+                Page { page } of { totalPages }
+            </div>
             {
                 page < totalPages && (
                     <button className='btnNext' onClick={ () => dispatch(setPage(page + 1)) }>

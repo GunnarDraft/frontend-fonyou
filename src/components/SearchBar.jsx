@@ -16,7 +16,7 @@ const SearchBar = () => {
     }, 1000);
 
     return (
-        <div className='search'>
+        <div className='searchBar'>
             <input
                 type='text'
                 id='search'
