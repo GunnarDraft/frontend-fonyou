@@ -9,8 +9,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js',
-    publicPath: '/frontend-fonyou/'
+    filename: 'bundle.js', 
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -49,8 +48,7 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: './public/index.html',
-      filename: './index.html',
-      publicPath: '/frontend-fonyou/'
+      filename: './index.html', 
 
     }),
     new MiniCssExtractPlugin({

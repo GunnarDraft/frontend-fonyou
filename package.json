@@ -8,7 +8,7 @@
     "predeploy": " npm run build",
     "deploy": "gh-pages -d build",
     "dev": "webpack serve --open --config webpack.config.dev.js",
-    "build": "react-scripts build",
+    "build": "webpack --mode production --config webpack.config.js",
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
     "lint": "eslint src/"
   },
