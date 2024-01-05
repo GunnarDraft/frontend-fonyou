@@ -1,6 +1,6 @@
  
 export const getCharacters = async (name, page) => {
-    const apiURL = "https://backend-fonyou.vercel.app/"
+    const apiURL = process.env.REACT_APP_URL_API
   
     try {
         const response = await fetch(`${apiURL}?page=${page}&name=${name}`);
