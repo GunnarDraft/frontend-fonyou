@@ -10,7 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/frontend-fonyou/'
+    publicPath: './dist/'
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -50,7 +50,8 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: './public/index.html',
       filename: './index.html',
-      publicPath: '/frontend-fonyou/'
+      publicPath: './dist/'
+
     }),
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
